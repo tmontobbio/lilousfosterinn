@@ -6,7 +6,8 @@ bundle lock --add-platform x86_64-linux
 
 bundle add active_model_serializers
 
-npm install react-icons --save
+npm i react-icons --save
+npm i -S react-scroll
 ```
 
 ### Run locally

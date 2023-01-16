@@ -52,7 +52,7 @@ ul {
 }
 
 #navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
 }
 
@@ -79,12 +79,16 @@ ul {
     opacity: .5;
 }
 
+#compass:hover {
+    opacity: .85;
+}
+
 .spacer {
-    width: 20vw;
+    width: 30vw;
 }
 
 .fade-in {
-    opacity: .8;
+    opacity: 1;
     transition: opacity 1s ease;
 }
 
@@ -93,10 +97,85 @@ ul {
     transition: opacity 1s ease;
 }
 
-/* Content */
+#navbar li:hover {
+    opacity: .5;
+    transition: opacity .4s ease;
+}
+
+.toggle-for {
+    animation: rotation .5s linear;
+    -webkit-animation: spin .5s linear;
+    -moz-animation: spin .5s linear;
+    animation: spin .5s linear;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.toggle-bac {
+    animation: rotation 1s infinite linear;
+
+}
+
+/* Content (main container for router) */
 
 #content {
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
+    height: 100%;
     margin: 0 auto !important;
+}
+
+/* Main View only CSS */
+#about-home,
+#fosters-home,
+#training-home,
+#contact-home {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* About */
+
+/* main view @ home (not detailed) */
+#about-home {
+    background-color: rgb(134, 254, 156);
+}
+
+/* Fosters */
+
+/* main view @ home (not detailed) */
+#fosters-home {
+    background-color: rgb(134, 246, 254);
+}
+
+/* Training */
+
+/* main view @ home (not detailed) */
+#training-home {
+    background-color: rgb(134, 142, 254);
+}
+
+/* Contact */
+
+/* main view @ home (not detailed) */
+#contact-home {
+    background-color: rgb(238, 134, 254);
 }

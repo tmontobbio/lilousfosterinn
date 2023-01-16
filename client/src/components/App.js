@@ -1,19 +1,26 @@
 
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
-import logo from "../components/img/dog-logo-1.png"
 import Footer from './Footer';
 import NavBar from './NavBar';
+import About from "./About";
+import Fosters from "./Fosters";
+import Training from "./Training";
+import Contact from "./Contact";
 import { useState } from 'react';
-import Content from './Content';
 
 function App() {
+
+  const [navVisible, setNavVisible] = useState(false)
 
   return (
     <div className="App">
       <div id="page">
-        <NavBar />
-        <Content />
+        <NavBar navVisible={navVisible} setNavVisible={setNavVisible} />
+        <About />
+        <Fosters />
+        <Training />
+        <Contact />
         <Footer />
       </div>
     </div>
